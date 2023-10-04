@@ -13,11 +13,15 @@ function productModel(sequelize, Sequelize) {
           allowNull: false,
         },
         price: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING(50),
           allowNull: false,
         },
         weight: {
           type: Sequelize.INTEGER,
+          allowNull: false,
+        },
+        satuan: {
+          type: Sequelize.STRING(10),
           allowNull: false,
         },
         image: {
