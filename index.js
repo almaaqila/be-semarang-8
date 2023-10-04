@@ -6,12 +6,13 @@ const db = require('./db/index_db')
 const Product = db.product;
 const Order = db.order;
 
+app.use(cors());
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json.
 app.use(bodyParser.json());
-app.use(cors());
 
 
 app.get("/api/products", async (req, res) => {
